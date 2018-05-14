@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="container-fluid">
+        <form method="post" action="" enctype="multipart/form-data">
+            {% csrf_token %}
+            <h1>Register</h1>
+            {% if profile_form %}
+                {{ profile_form.as_p }}
+            {% endif %}
+            {{ user_form.as_p }}
+            {{ baseinfo_form.as_p }}
+        <button type="submit">Submit</button>
+        </form>
+    </div>
+{% endblock %}

@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'blogger:blogger_bloggerprofile_list' %}">BloggerProfile Listing</a></p>
+<table class="table">
+<tr><td>name</td><td>{{ object.name }}</td></tr>
+<tr><td>blogger_id</td><td>{{ object.blogger_id }}</td></tr>
+<tr><td>email</td><td>{{ object.email }}</td></tr>
+<tr><td>phone</td><td>{{ object.phone }}</td></tr>
+<tr><td>city</td><td>{{ object.city }}</td></tr>
+<tr><td>state</td><td>{{ object.state }}</td></tr>
+<tr><td>pin</td><td>{{ object.pin }}</td></tr>
+<tr><td>image</td><td>{{ object.image }}</td></tr>
+<tr><td>claps</td><td>{{ object.claps }}</td></tr>
+<tr><td>birthdate</td><td>{{ object.birthdate }}</td></tr>
+<tr><td>bio</td><td>{{ object.bio }}</td></tr>
+<tr><td>created</td><td>{{ object.created }}</td></tr>
+<tr><td>portfolio</td><td>{{ object.portfolio }}</td></tr>
+<tr><td>journ_with_us</td><td>{{ object.journ_with_us }}</td></tr>
+<tr><td>business_rate</td><td>{{ object.business_rate }}</td></tr>
+<tr><td>net_business</td><td>{{ object.net_business }}</td></tr>
+</table>
+<a class="btn btn-primary" href="{{object.get_update_url}}">Edit BloggerProfile</a>
+
+{% endblock %}

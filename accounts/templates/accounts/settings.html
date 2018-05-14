@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+             {% if user.BloggerProfile %}
+              <h4>Donator Profile Settings</h4>
+                     <li><a href="{% url 'donator:donator_profile_update' user.BloggerProfile.pk %}">Edit Donator Profile</a></li>
+                {% endif %}
+
+          <br>
+                {% if user.ClientProfile %}
+                    <h4>Receiver Profile Settings</h4>
+                    <li><a href="{% url 'receiver:receiver_ClientProfile_update' user.id %}">Edit Receiver Profile</a></li>
+                  {% endif %}
+          <br>
+
+
+                {% if user.volunteerprofile %}
+                    <h4>Volunteer Profile Settings</h4>
+                    <li><a href="#">Edit Volunteer Profile</a></li>
+                  {% endif %}
+
+<h4>Donation Settings</h4>
+<h4>Center Settings</h4>
+<h4>Task Settings</h4>
+<h4>Reminder Settings</h4>
+
+{% endblock %}
+

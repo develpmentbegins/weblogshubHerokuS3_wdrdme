@@ -1,0 +1,48 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<p><a class="btn btn-default" href="{% url 'blogger:blogger_bloggerprofile_list' %}">BloggerProfile Listing</a></p>
+<table class="table">
+<tr>
+<td>ID</td><td>Link</td>
+    <td>name</td>
+    <td>blogger_id</td>
+    <td>email</td>
+    <td>phone</td>
+    <td>city</td>
+    <td>state</td>
+    <td>pin</td>
+    <td>image</td>
+    <td>claps</td>
+    <td>birthdate</td>
+    <td>bio</td>
+    <td>created</td>
+    <td>portfolio</td>
+    <td>journ_with_us</td>
+    <td>business_rate</td>
+    <td>net_business</td>
+</tr>
+{% for object in object_list %}
+<tr>
+    <td>{{object.pk}}</td>
+    <td><a href="{{object.get_absolute_url}}">{{object}}</a></td>
+    <td>{{ object.name }}</td>
+    <td>{{ object.blogger_id }}</td>
+    <td>{{ object.email }}</td>
+    <td>{{ object.phone }}</td>
+    <td>{{ object.city }}</td>
+    <td>{{ object.state }}</td>
+    <td>{{ object.pin }}</td>
+    <td>{{ object.image }}</td>
+    <td>{{ object.claps }}</td>
+    <td>{{ object.birthdate }}</td>
+    <td>{{ object.bio }}</td>
+    <td>{{ object.created }}</td>
+    <td>{{ object.portfolio }}</td>
+    <td>{{ object.journ_with_us }}</td>
+    <td>{{ object.business_rate }}</td>
+    <td>{{ object.net_business }}</td>
+</tr>
+{% endfor %}
+</table><a class="btn btn-primary" href="{% url 'blogger:blogger_bloggerprofile_create' %}">Create new BloggerProfile</a>
+{% endblock %}
