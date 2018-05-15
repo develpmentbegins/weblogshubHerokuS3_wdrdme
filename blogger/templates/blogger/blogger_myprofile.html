@@ -3,6 +3,7 @@
 {% block content %}
 <p><a class="btn btn-default" href="{% url 'blogger:blogger_bloggerprofile_list' %}">BloggerProfile Listing</a></p>
 <table class="table">
+<tr><td>username</td><td>{{ object.user.username }}</td></tr>
 <tr><td>name</td><td>{{ object.name }}</td></tr>
 <tr><td>blogger_id</td><td>{{ object.blogger_id }}</td></tr>
 <tr><td>email</td><td>{{ object.email }}</td></tr>

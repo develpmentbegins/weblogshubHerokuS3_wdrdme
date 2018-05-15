@@ -14,6 +14,7 @@ urlpatterns = [
     url(r'^login/$', login, {'template_name':'accounts/login.html'}, name='login'),
     url(r'^logout/$', logout, {'template_name':'accounts/logout.html'}, name='logout'),
     url(r'^quick_register/$', views.quick_register, name='quick_register'),
+    url(r'^sign_up/$', views.signup, name='signup'),
     url(r'^razoweblogshuby/$', views.razoweblogshuby, name='razoweblogshuby'),
 
     url(r'^change-password/$', views.change_password, name='change_password'),

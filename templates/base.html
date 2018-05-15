@@ -51,7 +51,8 @@ fjs.parentNode.insertBefore(js, fjs);
                         <a href="#" class="dropdown-toggle" data-toggle="dropdown">Blogshub<span class="caret"></span></a>
                         <ul class="dropdown-menu">
                             <li><a href="">Interesting Stuff</a></li>
-                            <li><a href="">Create A blog</a></li>
+                            <li><a href="{% url 'posts:create' %}">Create A blog</a></li>
+                            <li><a href="{% url 'posts:list' %}">All Posts</a></li>
                             <li><a href="">Setup Interest</a></li>
                             <li><a href="">Follw Me!</a></li>
                             <li><a href="">Dashboard</a></li>
@@ -96,7 +97,7 @@ fjs.parentNode.insertBefore(js, fjs);
                         </ul>
 
                 <ul class="nav navbar-nav navbar-right">
-                    <li><a href="{% url 'accounts:quick_register' %}">SignUp</a></li>
+                    <li><a href="{% url 'accounts:signup' %}">SignUp</a></li>
                     <li><a href="{% url 'accounts:login' %}">Login</a></li>
                     <li><a href="{% url 'accounts:reset_password' %}">Recover_Password</a></li>
                     <li><a href="">AboutUs</a></li>

@@ -28,7 +28,6 @@ def create_baseinfouser(sender, instance, created, **kwargs):
 
 
 
-
 # from django.db import models
 # from django.contrib.auth.models import User
 # from django.db.models.signals import post_save

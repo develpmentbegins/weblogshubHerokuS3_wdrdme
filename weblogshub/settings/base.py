@@ -30,13 +30,6 @@ DEBUG = True
 # ALLOWED_HOSTS = ['weblogshub.herokuapp.com',] <-- no need
 ALLOWED_HOSTS = []
 
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'youremail@gmail.com'
-EMAIL_HOST_PASSWORD = 'yourpassword'
-EMAIL_PORT = 587
-EMAIL_USE_TLS = True
-DEFAULT_FROM_EMAIL = 'Your Name <you@email.com>'
-
 ADMINS = (
     ('You', 'you@email.com'),
 )
@@ -155,6 +148,8 @@ SECURE_HSTS_SECONDS             = None
 SECURE_HSTS_INCLUDE_SUBDOMAINS  = False
 SECURE_FRAME_DENY               = False
 
+# DEFAULT_FROM_EMAIL = 'Your Name <you@email.com>'
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
@@ -171,6 +166,8 @@ LOGIN_EXEMPT_URLS = (
     r'^account/reset_password/done/$',
     r'^account/reset_password/confirm/(?P<uidb64>[0-9A-Za-z]+)-(?P<token>.+)/$',
     r'^account/reset_password/complete/$',
+    r'^account/sign_up/$',
+
     #r'^comments/(?P<id>\d+)/delete/$',
 
 )
